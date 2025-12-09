@@ -1,21 +1,21 @@
 
-// maxfmod.control.js
-// Simple controller for FMOD Studio integration via Console scripting
-// Usage: [js maxfmod.minim.js]
-// by Than van Nispen using https://www.fmod.com/docs/2.02/studio/scripting-api-reference-project.html 
-// and with help from Anthropic Claude Sonnet (LLM AI use CO2 compensated via Treesforall...)
+// Simple (minimal) controller for FMOD Studio integration via Console scripting
+// Usage: [js maxfmod.minim.js] in max msp and receive function call with value(s)
+// the max js functions compile a javascript command to be send to FMOD, therefore the actual js being generated is in between double quotes ""
 // more complex approaches are also possible, contact author for questions and suggestions
+// created by Than van Nispen using https://www.fmod.com/docs/2.02/studio/scripting-api-reference-project.html 
+// and with help from Anthropic Claude Sonnet (LLM AI use CO2 compensated via Treesforall...)
 
-/* thoughts and comments : 
+
+/* *** thoughts and comments : ***
 we now use mainly findEvent() 
 but studio.project.lookup(path); might be a nicer option? 
 var path = "event:/Ambience/Forest/Trees";
 var event = studio.project.lookup(path);
-
+or
 var event = studio.project.lookup("event:/");
-undefined
 event.items[0].name
-
+etc.
 */
 
 

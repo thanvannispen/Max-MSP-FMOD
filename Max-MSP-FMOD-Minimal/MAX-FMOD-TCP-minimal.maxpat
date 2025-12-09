@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 76.0, 116.0, 996.0, 793.0 ],
+		"rect" : [ 76.0, 101.0, 996.0, 793.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,31 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.57394403219223, 96.505861878395081, 108.285708427429199, 33.0 ],
+					"presentation_linecount" : 2,
+					"text" : "Parameter value (f) to target (id)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 318.18365353345871, 634.722667157649994, 108.0, 22.0 ],
+					"text" : "selectEvent Forest"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial Bold",
 					"id" : "obj-10",
@@ -135,7 +160,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1181.236844301223755, 492.992284893989563, 132.604005455970764, 60.0 ],
+					"patching_rect" : [ 1181.236844301223755, 492.992284893989563, 135.0, 60.0 ],
 					"text" : "for more complex projects with multiple events this approach works better"
 				}
 
@@ -388,13 +413,13 @@
 				"box" : 				{
 					"fontsize" : 7.0,
 					"id" : "obj-139",
-					"linecount" : 24,
+					"linecount" : 27,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 113.7626011967659, 477.302876055240631, 44.0, 196.0 ],
-					"text" : "\"var e = studio.window.browserCurrent(); if (e && e.parameters && e.parameters[1]) { e.parameters[1].setCursorPosition(0); output = 'PARAM_SET:1:0:' + e.parameters[1].name; } else { output = 'ERROR:Parameter index out of range'; }\""
+					"patching_rect" : [ 113.7626011967659, 477.302876055240631, 46.0, 220.0 ],
+					"text" : "\"var e = studio.window.browserCurrent(); if (e && e.parameters && e.parameters[0]) { e.parameters[0].setCursorPosition(0.417); output = 'PARAM_SET:0:0.417:' + e.parameters[0].preset.presetOwner.name; } else { output = 'ERROR:Parameter index out of range'; }\""
 				}
 
 			}
@@ -442,8 +467,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1017.55638188123703, 538.722667157649994, 130.0, 22.0 ],
-					"text" : "triggerEvent \"Level 02\""
+					"patching_rect" : [ 1017.55638188123703, 538.722667157649994, 111.0, 22.0 ],
+					"text" : "triggerEvent Forest"
 				}
 
 			}
@@ -586,11 +611,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-38",
+					"linecount" : 6,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 390.447371959686279, 517.230193674564362, 60.0, 22.0 ]
+					"patching_rect" : [ 390.447371959686279, 517.230193674564362, 60.0, 89.0 ],
+					"text" : "\"Unknown command: selectevent\""
 				}
 
 			}
@@ -1715,7 +1742,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 756.57394403219223, 173.965315818786621, 98.0, 33.0 ],
+					"patching_rect" : [ 756.57394403219223, 173.965315818786621, 99.0, 33.0 ],
 					"text" : "example : ctlin 1 to parameters[1]"
 				}
 
@@ -2596,6 +2623,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-136", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-186", 0 ],
 					"source" : [ "obj-50", 0 ]
 				}
@@ -2715,7 +2749,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "maxfmod.minim.js",
-				"bootpath" : "~/Downloads/Max-MSP-FMOD/Max-MSP-FMOD-Minimal",
+				"bootpath" : "~/Documents/GitHub/Max-MSP-FMOD/Max-MSP-FMOD/Max-MSP-FMOD-Minimal",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1

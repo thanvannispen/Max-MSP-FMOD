@@ -253,7 +253,7 @@ function setParam(paramIndex, value) {
     var cmd = "var e = studio.window.browserCurrent(); " +
               "if (e && e.parameters && e.parameters[" + paramIndex + "]) { " +
               "e.parameters[" + paramIndex + "].setCursorPosition(" + value + "); " +
-              "output = 'PARAM_SET:" + paramIndex + ":" + value + ":' + e.parameters[" + paramIndex + "].name; " +
+              "output = 'PARAM_SET:" + paramIndex + ":" + value + ":' + e.parameters[" + paramIndex + "].preset.presetOwner.name; " +
               "} else { output = 'ERROR:Parameter index out of range'; }";
     sendCommand(cmd);
 }
